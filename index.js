@@ -22,7 +22,9 @@ const corsOptions = {
     optionsSuccessStatus: 200 
 }
 
-app.use(helmet())
+app.use(helmet({
+    crossOriginResourcePolicy: false
+}))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
