@@ -17,10 +17,10 @@ const sectionRoutes = require('./routes/section')
 const columnsRoutes = require('./routes/columns')
 const promotionRoutes = require('./routes/promotion')
 
-const corsOptions = {
-    origin: BASE_URL,
-    optionsSuccessStatus: 200 
-}
+// const corsOptions = {
+//     origin: BASE_URL,
+//     optionsSuccessStatus: 200 
+// }
 
 app.use(helmet())
 app.use(cors(corsOptions))
