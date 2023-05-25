@@ -1,5 +1,5 @@
-module.exports = {
-    PORT: 3002,
-    MONGODB_URL: 'mongodb+srv://bohdan:7PAKvvedZZPdFCOR@news.8bhjtex.mongodb.net/?retryWrites=true&w=majority',
-    BASE_URL: 'http://localhost:3000'
+if(process.env.NODE_ENV === 'production') {
+    module.exports = require('./keys.prod')
+} else {
+    module.exports = require('./keys.dev')
 }
