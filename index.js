@@ -4,7 +4,6 @@ const cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser')
 const path = require("path")
-const helmet = require('helmet')
 
 const { PORT, MONGODB_URL, BASE_URL } = require('./keys')
 
@@ -22,9 +21,6 @@ const corsOptions = {
     optionsSuccessStatus: 200 
 }
 
-app.use(helmet({
-    crossOriginResourcePolicy: false
-}))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
