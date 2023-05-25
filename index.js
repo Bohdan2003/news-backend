@@ -23,7 +23,7 @@ const corsOptions = {
 }
 
 app.use(helmet())
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
 
