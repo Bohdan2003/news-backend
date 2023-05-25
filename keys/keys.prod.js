@@ -1,5 +1,5 @@
 module.exports = {
-    PORT: 3002,
-    MONGODB_URL: 'mongodb+srv://bohdan:7PAKvvedZZPdFCOR@news.8bhjtex.mongodb.net/?retryWrites=true&w=majority',
-    BASE_URL: 'http://localhost:3000'
+    PORT: process.env.PORT,
+    MONGODB_URL: process.env.MONGODB_URL,
+    BASE_URL: process.env.BASE_URL
 }
